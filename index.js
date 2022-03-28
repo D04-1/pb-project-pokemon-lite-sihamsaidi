@@ -18,6 +18,13 @@ class Pokemon {
       console.log(`${gegner.name} hat Gewonnen`);
       return `${gegner} hat Gewonnen`;
     }
+    if (gegner.gesundheit <= 0) {
+      console.log(`${this.name} ist schon tod!`);
+      return;
+    }
+    if (this.gesundheit <= 0) {
+      console.log(`${this.name} ist schon tod`);
+    }
     gegner.gesundheit = gegner.gesundheit - attack.damage;
     this.magie = this.magie - attack.magieMenge;
     console.log(`${this.magie} hat nicht gereischt`);
